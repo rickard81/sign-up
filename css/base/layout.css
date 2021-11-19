@@ -1,0 +1,117 @@
+/* ====================================================
+
+ @contributors: Rickard Andersson
+ @content: layout
+
+======================================================= */
+
+/****************************************
+  ==== BASICS
+****************************************/
+
+html, body {
+  height: 100%;
+}
+body {
+  text-align: center; background: #fff; -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+div.master-wrap {
+  width: 100%; min-height: 100%; margin: 0 auto; overflow: hidden; position: relative;
+}
+main.main {
+  text-align: left; position: relative; z-index: 1;
+}
+div.master:after, main.main:after {
+  visibility: hidden; display: block; font-size: 0; content: " "; clear: both; height: 0;
+}
+
+/****************************************
+  ==== HEADER
+****************************************/
+
+header.main {
+    width: 100%; padding: 60px 80px; position: relative; z-index: 1;
+}
+header.main .logo {
+    width: 150px; height: 30px; float: left; background: #eee;
+}
+
+/****************************************
+  ==== NAVIGATION
+****************************************/
+
+nav.main {
+    width: calc(100% - 300px); height: 10px; padding: 10px 0; float: left; text-align: center;
+}
+nav.main ul {
+    margin: 0;
+}
+nav.main ul li {
+    width: 125px; margin: 0 10px; padding: 0; display: inline-block;
+}
+nav.main ul li:before {
+    display: none;
+}
+nav.main ul li a {
+    width: 100%; height: 10px; display: block; background: #eee;
+}
+
+/****************************************
+  ==== CTA
+****************************************/
+
+header.main .btn.sign-up {
+    float: right;
+}
+
+/****************************************
+  ==== FOOTER
+****************************************/
+
+footer.main {
+    width: 100%; height: 20vh; position: absolute; bottom: 0; left: 0; z-index: 1; background: #eee;
+}
+
+/****************************************
+  ==== OVERLAY
+****************************************/
+
+div.overlay {
+  position: absolute; top: 0; bottom: 0; left: 0; right: 0; z-index: 99; cursor: pointer; background: rgba(40,49,66,0.9); opacity: 0; visibility: hidden; transition: all .2s ease-in-out;
+}
+div.overlay.open {
+  opacity: 1; visibility: visible;
+}
+
+/****************************************
+  ==== HELPERS
+****************************************/
+
+.hide {
+  display: none !important;
+}
+
+/****************************************
+  ==== MEDIA QUERIES
+****************************************/
+
+@media only screen and (max-width: 1024px){
+
+    header.main {
+        padding: 30px 40px;
+    }
+    nav.main {
+        display: none;
+    }
+
+}
+
+@media only screen and (max-width: 768px){
+
+    header.main {
+        padding: 20px 30px;
+    }
+    header.main .logo {
+        width: 60px;
+    }
+}

@@ -1,0 +1,48 @@
+/* ====================================================
+
+ @contributors: Rickard Andersson
+ @content: reset
+
+======================================================= */
+
+* {
+  margin: 0; padding: 0; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+h1, h2, h3, h4, h5, h6, pre, code, address, caption, cite, code, th, figcaption {
+  font-size: 1em; font-weight: normal; font-style: normal;
+}
+fieldset, iframe {
+  border: 0;
+}
+caption, th {
+  text-align: left;
+}
+table {
+  border-collapse: collapse; border-spacing: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, video, canvas, small {
+  display: block;
+}
+img, img a, img a:hover {
+  max-width: 100%; border: 0; display: block; -ms-interpolation-mode: bicubic;
+}
+iframe {
+  max-width: 100%; display: block;
+}
+::-moz-selection {
+  background: #000; color: #fff; text-shadow: none;
+}
+::selection {
+  background: #000; color: #fff; text-shadow: none;
+}
+::-ms-clear {
+  display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+
+  * {
+    animation-duration: 0s !important;
+  }
+
+}

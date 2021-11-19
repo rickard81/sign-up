@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" class="no-js">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rickard Andersson - Designer & Developer</title>
+    <meta property="og:title" content="" />
+    <meta name="description" content="" />
+    <link rel="apple-touch-icon" sizes="180x180" href="https://rickard.dk/images/favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://rickard.dk/images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="https://rickard.dk/images/favicons/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://rickard.dk/images/favicons/favicon-16x16.png">
+    <link rel="mask-icon" href="https://rickard.dk/images/favicons/safari-pinned-tab.svg" color="#0c2735">
+    <link rel="shortcut icon" href="https://rickard.dk/images/favicons/favicon.ico">
+    <meta name="msapplication-TileColor" content="#eee8aa">
+    <meta name="msapplication-config" content="https://rickard.dk/images/favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/base/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/base/typography.css" />
+    <link rel="stylesheet" type="text/css" href="css/base/layout.css" />
+    <link rel="stylesheet" type="text/css" href="css/components/buttons.css" />
+    <link rel="stylesheet" type="text/css" href="css/components/dialogs.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms/reset.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms/text-fields.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms/checkboxes.css" />
+    <link rel="stylesheet" type="text/css" href="css/forms/radiobuttons.css" />
+</head>
+<body>
+    <div class="master-wrap clear">
+        <header class="main clear">
+            <a href="#main" class="logo"></a>
+            <nav class="main clear" aria-label="Desktop menu">
+                <ul>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                    <li><a href="#"></a></li>
+                </ul>
+            </nav>
+            <button class="btn sign-up open-dialog" data-dialog="dialog-signup">Sign up</button>
+        </header>
+        <div id="dialog-signup" class="dialog" role="dialog" aria-label="Descriptive label">
+            <div class="wrap">
+                <div class="content clear" tabindex="0">
+                    <form id="signup-form">
+                        <h2>Sign up</h2>
+                        <div class="field">
+                            <label for="fname">First name*</label>
+                            <input type="text" id="fname" name="FirstName" value="" class="req" />
+                            <p class="form-error hide">Please enter your first name.</p>
+                        </div>
+                        <div class="field">
+                            <label for="lname">Last name*</label>
+                            <input type="text" id="lname" name="LastName" value="" class="req" />
+                            <p class="form-error hide">Please enter your last name.</p>
+                        </div>
+                        <div class="field">
+                            <fieldset class="stacked">
+                                <legend>Gender</legend>
+                                <div class="radio">
+                                    <input type="radio" id="gfemale" name="Gender" value="Female" checked />
+                                    <label for="gfemale">Female</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="gmale" name="Gender" value="Male" />
+                                    <label for="gmale">Male</label>
+                                </div>
+                                <div class="radio">
+                                    <input type="radio" id="gother" name="Gender" value="Other" />
+                                    <label for="gother">Other</label>
+                                </div>
+                            </fieldset>
+                        </div>
+                        <div class="field">
+                            <label for="phone">Phone number</label>
+                            <input type="text" id="phone" name="PhoneNumber" class="phone req" value="" />
+                            <p class="form-error hide">Please enter a danish phone number. Ex: 12345678</p>
+                        </div>
+                        <div class="field">
+                            <label for="email">Email*</label>
+                            <input type="email" id="email" name="Email" value="" class="email req" />
+                            <p class="form-error hide">Please enter a valid email.</p>
+                        </div>
+                        <div class="field">
+                            <input type="checkbox" id="subscribe" name="SubscribeToOffers" value="" />
+                            <label for="subscribe">Get nice offers directly in your inbox</label>
+                        </div>
+                        <div class="field">
+                            <input type="submit" value="Sign up" class="btn" />
+                        </div>
+                    </form>
+                    <div id="signup-success" class="hide">
+                        <h2>Congratulations</h2>
+                        <p>Your account is now created, please check your inbox for an verification email.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="foot">
+                <p class="title">Sign up</p>
+                <button class="btn s icon-after close-dialog" aria-label="Label">Close</button>
+            </div>
+        </div>
+        <div class="overlay"></div>
+        <footer class="main clear"></footer>
+    </div>
+    <!--[if lt IE 9]><script src="js/html5shiv.min.js"></script><![endif]-->
+    <script src="js/modernizr.js"></script>
+    <script src="js/jquery.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/dialogs.js"></script>
+    <script src="js/validation.js"></script>
+    <script src="js/signup.js"></script>
+</body>
+</html>

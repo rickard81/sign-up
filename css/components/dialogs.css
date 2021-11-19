@@ -1,0 +1,37 @@
+/* ====================================================
+
+ @contributor: Rickard Andersson
+ @content: dialogs
+
+======================================================= */
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+
+div.dialog {
+  width: 90%; max-width: 700px; max-height: 100%; padding: 0 0 60px 0; position: fixed; top: 0; left: 50%; z-index: 100; opacity: 0; visibility: hidden; -webkit-transform: translateX(-50%); transform: translateX(-50%); transition: opacity .2s ease-in-out; will-change: opacity;
+} 
+div.dialog div.wrap {
+  background: #fff; border-radius: 10px 10px 0 0; box-shadow: 0 20px 40px rgba(0,0,0,0.25);
+}
+div.dialog div.content {
+  padding: 40px 40px 35px 40px; text-align: left; overflow: auto; outline: none;
+}
+div.dialog .foot {
+  width: 100%; height: 60px; padding: 10px 20px; position: absolute; bottom: 0; left: 0; border-radius: 0 0 10px 10px; background: #eee;
+}
+div.dialog .foot p {
+  width: 100%; float: left; line-height: 40px; padding: 0 100px 0 0; margin: 0; font-size: 1.6em; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; text-align: left;
+}
+div.dialog .foot .btn {
+  height: 30px; line-height: 30px; padding: 0 10px; position: absolute; top: 15px; right: 20px; margin: 0;
+}
+
+/****************************************
+  ==== STATES
+****************************************/
+
+div.dialog.open {
+  opacity: 1; visibility: visible;
+} 

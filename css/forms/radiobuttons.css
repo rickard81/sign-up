@@ -1,0 +1,50 @@
+/* ====================================================
+
+ @contributor: Rickard Andersson
+ @content: radio buttons
+
+======================================================= */
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+
+input[type="radio"]:not(:checked), input[type="radio"]:checked {
+  position: absolute; left: -9999px;
+}
+input[type="radio"]:not(:checked) + label, input[type="radio"]:checked + label {
+  width: 100%; position: relative; padding: 0 0 0 30px; margin: 0 0 10px 0; line-height: 22px; display: inline-block; font-weight: 400; font-size: 1.5em; text-transform: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+input[type="radio"]:not(:checked) + label:before, input[type="radio"]:checked + label:before {
+  content: ''; width: 20px; height: 20px; position: absolute; left: 0; top: 0; border: #000 1px solid; background: #fff; border-radius: 50%;
+}
+input[type="radio"]:not(:checked) + label:after, input[type="radio"]:checked + label:after {
+  content: ''; width: 10px; height: 10px; position: absolute; top: 6px; left: 6px; text-align: center; border-radius: 50%;
+}
+input[type="radio"]:checked:focus + label:before, input[type="radio"]:not(:checked):focus + label:before {
+  box-shadow: 0 0 0 1px #000;
+}
+
+/****************************************
+  ==== CHECKED
+****************************************/
+
+input[type="radio"]:checked + label:after {
+  background: #000;
+}
+
+/****************************************
+  ==== STATES
+****************************************/
+
+input[type="radio"].error:not(:checked) + label:before {
+  border-color: #f00;
+}
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+
+.stacked .radio {
+  float: left; margin: 0 20px 0 0;
+}

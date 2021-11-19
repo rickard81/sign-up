@@ -1,0 +1,45 @@
+/* ====================================================
+
+ @contributor: Rickard Andersson
+ @content: checkboxes
+
+======================================================= */
+
+/****************************************
+  ==== LAYOUT
+****************************************/
+
+input[type="checkbox"]:not(:checked), input[type="checkbox"]:checked {
+  position: absolute; left: -9999px;
+}
+input[type="checkbox"]:not(:checked) + label, input[type="checkbox"]:checked + label {
+  position: relative; padding: 0 0 0 34px; margin: 0 0 10px 0; line-height: 22px; display: inline-block; font-weight: 400; font-size: 1.5em; text-transform: none; -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none;
+}
+input[type="checkbox"]:not(:checked) + label:before, input[type="checkbox"]:checked + label:before {
+  content: ''; width: 20px; height: 20px; position: absolute; left: 0; top: 0; border: #000 1px solid; background: #fff;
+}
+input[type="checkbox"]:not(:checked) + label:after, input[type="checkbox"]:checked + label:after {
+  content: ''; width: 22px; height: 22px; line-height: 22px; position: absolute; top: 0; left: 0;
+}
+input[type="checkbox"]:checked:focus + label:before, input[type="checkbox"]:not(:checked):focus + label:before {
+  box-shadow: 0 0 0 1px #141155;
+}
+
+/****************************************
+  ==== CHECKED
+****************************************/
+
+input[type="checkbox"]:checked + label:before {
+  border-color: #000;
+}
+input[type="checkbox"]:checked + label:after {
+  background-size: 75% 75%; background-repeat: no-repeat; background-position: 50% 50%; background-image: url('data:image/svg+xml;utf8,<svg fill="%23000000" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M 20.292969 5.2929688 L 9 16.585938 L 4.7070312 12.292969 L 3.2929688 13.707031 L 9 19.414062 L 21.707031 6.7070312 L 20.292969 5.2929688 z"></path></svg>');
+}
+
+/****************************************
+  ==== STATES
+****************************************/
+
+input[type="checkbox"].error:not(:checked) + label:before {
+  border-color: #f00;
+}
